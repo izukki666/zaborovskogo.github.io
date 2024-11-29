@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">logo</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About Company</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>We'll help manage your business</h1>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Exceptuer sint occaecat cupidatat non proident, sunt in culpa.</p>
+            <p><a href="#">Images from Freepik</a></p>
+        </section>
+        <section class="services">
+            <div class="service consultations">
+                <img src="images/consultations.jpg" alt="Consultations">
+                
+            </div>
+            <div class="service strategy">
+                <img src="images/strategy.jpg" alt="Strategy">
+                
+            </div>
+            <div class="service investment">
+                <img src="images/investment.jpg" alt="Investment">
+                
+            </div>
+            <div class="service marketing">
+                <img src="images/marketing.jpg" alt="Marketing">
+                
+            </div>
+            <div class="service startups">
+                <img src="images/startups.jpg" alt="Startups">
+                
+            </div>
+            <div class="service anti-crisis">
+                <img src="images/anti-crisis.jpg" alt="Anti-Crisis">
+                
+            </div>
+        </section>
+        
+        </section>
+    </main>
+    <footer>
+        <p>Sample text. Click to start editing the text.</p>
+    </footer>
+</body>
+
+</html>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: gray;
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.service {
+    position: relative;
+    height: 150px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.service h2 {
+    z-index: 1;
+}
+
+.service::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-size: cover;
+    background-position: center;
+}
+
+.consultations {
+    background-color: gray;
+    background-image: url('consultations.jpg');
+}
+
+.strategy {
+    background-color: orange;
+    background-image: url('strategy.jpg');
+}
+
+.investment {
+    background-color: gray;
+    background-image: url('investment.jpg');
+}
+
+.marketing {
+    background-color: green;
+    background-image: url('marketing.jpg');
+}
+
+.startups {
+    background-color: gray;
+    background-image: url('startups.jpg');
+}
+
+.anti-crisis {
+    background-color: teal;
+    background-image: url('anti-crisis.jpg');
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .service {
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .service {
+        height: 100px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+.service {
+    position: relative;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.service img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.7; 
+}
+
+.service h2 {
+    z-index: 1;
+    color: white;
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+</style>
